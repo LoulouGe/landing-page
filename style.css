@@ -1,0 +1,174 @@
+/* ── Reset & base ─────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fdf6f0;
+  color: #3d3d3d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ──────────────────────────────────────── */
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+}
+
+header h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2.8rem;
+  color: #b56b8f;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #8a8a8a;
+  margin-top: 0.3rem;
+}
+
+/* ── Cards grid ──────────────────────────────────── */
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  width: 100%;
+}
+
+/* ── Individual card ─────────────────────────────── */
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  border-bottom: 5px solid transparent;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: card-appear 0.5s ease forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes card-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.card-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Card accent colours */
+.card-vocab {
+  border-bottom-color: #588157;
+}
+.card-calculus {
+  border-bottom-color: #e8a838;
+}
+.card-emperors {
+  border-bottom-color: #c05e5e;
+}
+.card-geo {
+  border-bottom-color: #5b8db8;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #b56b8f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
