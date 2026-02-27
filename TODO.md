@@ -1,0 +1,3 @@
+- Ajouter mon logo (logo.png)
+- Personnaliser les couleurs
+- Ajouter de nouveaux projets
