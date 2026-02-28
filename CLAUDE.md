@@ -42,7 +42,7 @@ Each card links to one of her other GitHub Pages projects:
 
 ### Assets
 
-- **logo.png** — Personal logo displayed at the top of the page (to be provided)
+- **logo.png** — Personal logo displayed at the top of the page
 
 ## Code Conventions
 
