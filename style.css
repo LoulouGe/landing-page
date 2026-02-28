@@ -165,10 +165,30 @@ footer a:hover {
 
   .logo {
     width: 150px;
-    height: auto;
   }
 
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ── Accessibility ────────────────────────────────── */
+
+.card:focus-visible {
+  outline: 3px solid #b56b8f;
+  outline-offset: 4px;
+}
+
+/* ── Reduced motion ───────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .card:hover {
+    transform: none;
   }
 }
